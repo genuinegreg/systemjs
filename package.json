@@ -20,7 +20,7 @@
     "qunit": "^0.6.2",
     "traceur": "0.0.105",
     "typescript": "^1.6.2",
-    "uglify-js": "~2.4.23"
+    "uglify-js": "^2.7.5"
   },
   "scripts": {
     "test:browser": "make test",
@@ -29,6 +29,7 @@
     "test": "npm run test:babel && npm run test:traceur && npm run test:typescript",
     "test:babel": "qunit -c s:./index.js -t ./test/test-babel.js",
     "test:traceur": "qunit -c s:./index.js -t ./test/test-traceur.js",
-    "test:typescript": "qunit -c s:./index.js -t ./test/test-typescript.js"
+    "test:typescript": "qunit -c s:./index.js -t ./test/test-typescript.js",
+    "uglify": "uglifyjs dist/system.src.js -o dist/system.src.min.js"
   }
 }
